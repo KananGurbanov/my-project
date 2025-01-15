@@ -6,11 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ ubuntu-latest, windows-latest ]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -31,5 +27,5 @@ jobs:
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifacts-${{ github.run_id }}
+          name: build-artifacts
           path: build/libs/*.jar
