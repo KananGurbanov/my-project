@@ -17,6 +17,7 @@ public class MyProjectApplication {
 
     @GetMapping("/")
     public String home() {
+
         return "Hello World";
     }
 
